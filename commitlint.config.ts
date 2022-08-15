@@ -20,7 +20,28 @@ const Configuration: UserConfig = {
    * Any rules defined here will override rules from @commitlint/config-conventional
    */
   rules: {
-    'type-enum': [2, 'always', ['foo']],
+    'type-case': [2, 'always', ['lower-case']],
+    'type-empty': [2, 'never'],
+    'type-enum': [
+      2,
+      'always',
+    [
+      'build',
+      'chore',
+      'ci',
+      'docs',
+      'feat',
+      'fix',
+      'perf',
+      'refactor',
+      'revert',
+      'style',
+      'test',
+      'translation',
+      'security',
+      'changeset'
+    ]
+    ]
   },
   /*
    * Functions that return true if commitlint should ignore the given message.
